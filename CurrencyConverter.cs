@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pz7
 {
@@ -16,12 +13,12 @@ namespace pz7
             {
                 {"USD_RUB", 80.6m},
                 {"EUR_RUB", 93.7m},
-                {"EUR_USD", 1.09m}, 
-                
+                {"EUR_USD", 1.09m},
+
                 {"RUB_USD", 1/80.6m},
                 {"RUB_EUR", 1/93.7m},
                 {"USD_EUR", 1/1.09m},
-                
+
                 {"USD_USD", 1.0m},
                 {"EUR_EUR", 1.0m},
                 {"RUB_RUB", 1.0m}

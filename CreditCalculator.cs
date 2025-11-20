@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pz7
 {
@@ -49,7 +45,6 @@ namespace pz7
         {
             decimal monthlyRate = interestRate / 100 / 12;
 
-            // Формула аннуитетного платежа
             decimal coefficient = monthlyRate * (decimal)Math.Pow((double)(1 + monthlyRate), loanTerm) /
                                 (decimal)(Math.Pow((double)(1 + monthlyRate), loanTerm) - 1);
 
