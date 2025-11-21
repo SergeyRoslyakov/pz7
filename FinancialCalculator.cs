@@ -15,6 +15,23 @@ namespace pz7
             depositCalculator = new DepositCalculator();
         }
 
+        public string SelectOption(string choice)
+        {
+            switch (choice)
+            {
+                case "1":
+                    return "CreditCalculator";
+                case "2":
+                    return "CurrencyConverter";
+                case "3":
+                    return "DepositCalculator";
+                case "4":
+                    return "Exit";
+                default:
+                    return "Invalid";
+            }
+        }
+
         public void Run()
         {
             while (true)
@@ -23,19 +40,20 @@ namespace pz7
                 DisplayMainMenu();
 
                 string choice = Console.ReadLine();
+                string result = SelectOption(choice);
 
-                switch (choice)
+                switch (result)
                 {
-                    case "1":
+                    case "CreditCalculator":
                         creditCalculator.CalculateCredit();
                         break;
-                    case "2":
+                    case "CurrencyConverter":
                         currencyConverter.ConvertCurrency();
                         break;
-                    case "3":
+                    case "DepositCalculator":
                         depositCalculator.CalculateDeposit();
                         break;
-                    case "4":
+                    case "Exit":
                         Console.WriteLine("Выход из программы...");
                         return;
                     default:
